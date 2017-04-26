@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    padding: 20px;
+}
+
+#container {
+    width: 455px;
+    height: 260px;
+    border: 3px solid #333;
+    overflow: hidden;
+    position: relative;
+}
+
+#list {
+    width: 2730px;
+    height: 260px;
+    position: absolute;
+    z-index: 1;
+}
+
+#list img {
+    float: left;
+}
+
+#buttons {
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    z-index: 2;
+    bottom: 20px;
+    left: 200px;
+}
+
+#buttons span {
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /*圆圈*/
+    background: #333;
+    margin-right: 5px;
+}
+
+#buttons .on {
+    background: orangered;
+}
+
+.arrow {
+    cursor: pointer;
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    background: RGBA(0, 0 ,0,.3);
+    color: white;
+}
+
+.arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+}
+
+#container:hover .arrow {
+    display: block;
+}
+/*鼠标移动到画面箭头就显示*/
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+

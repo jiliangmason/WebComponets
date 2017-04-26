@@ -1,0 +1,106 @@
+jq下拉菜单：
+1、children show hide
+<script type = "text/javascript" src = "jquery-1.7.1.min.js" />
+
+jQuery(document).ready = $
+$(function(){
+
+$(".navmenu").mouseover(function(){
+	$(this).children("ul").show();
+})
+
+$(".navmenu").mouseout(function(){
+	$(this).children("ul").hide();
+})
+
+})
+
+下拉菜单动画：
+JS：setTimeout
+jQuery
+CSS3
+
+jQuery:
+$(document).ready(function(){
+	$(".top-nav li").mousemove(function(){
+		$(this).find("ul").slideDown("1000");
+	});
+	
+	$(".top-nav li").mouseleave(function(){
+		$(this).find("ul").slideUp("slow");
+	})
+})
+/*箭头的写法*/
+<ul>
+<span class = "corner"></span>
+<li></li>
+<li></li>
+</ul>
+span {
+	display: block;
+	height: 11px
+	background: url(箭头图标) 31px(*) 0 no-repeat
+}
+
+JS：
+window.onload = function(){
+	var lis = document.geElementsByTagName("li");
+	for (var i = 0; i<lis.length; i++)
+	{
+		li[i].onmouseover= function(){
+			var u = this.getElementsByTagName("ul")[0];
+			if (u==undefined) return;
+			u.style.display = block;
+			addheight(u.id);
+		}
+	}
+}
+
+function addheight(id)
+{
+	var list = document.getElementById(id);
+	var h = list.offsetHeight;
+	h+=1;
+	if (h<=42)
+	{
+		list.style.height = h+"px";
+		setTimeout("addheight('"+id+"')", 10);
+	} //"addheight('"+id+"')" = addheight( 'id' )
+	else {
+		return;
+	}
+}
+
+function delheight(id)
+{
+	h -= 1;
+	if (h > 0)
+	{
+		list.style.height = h+"px";
+		setTimeout("delheight('" + id + "', -1)", 10);
+	}
+	else
+	{
+		list.style.display = none;
+		return;
+	}
+}
+
+function changeH(id count){
+	h+=count;
+	if (count > 0)
+	{
+		增加高度
+		if (h<=42)
+	{
+		list.style.height = h+"px";
+		setTimeout("addheight('"+id+"', count)", 10);
+	} //"addheight('"+id+"')" = addheight( 'id' )
+	else {
+		return;
+	}
+	}
+	else {
+		减小高度
+	}
+}

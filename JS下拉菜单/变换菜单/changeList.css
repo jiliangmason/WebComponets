@@ -1,0 +1,47 @@
+.top-nav {
+    font-size: 12px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    list-style-type: none;
+    border-bottom: 8px solid #DC4E1B;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.top-nav li {
+    margin-right: 1px;
+    float: left;
+} /*不给li宽度和高度*/
+
+.top-nav li a {
+    text-decoration: none;
+    color: #666;
+    display: inline-block;
+    background: #dddddd;
+    line-height: 20px;
+    width: 80px;
+    text-align: center;
+}
+
+.top-nav li span:nth-child(2) {
+    display: none;
+}
+
+.top-nav li a:hover span:nth-child(2){
+    display: block;
+    background: #DC4E1B;
+    color: #fff;
+}
+
+.top-nav li a:hover span:first-child {
+    display: none;
+}
+
+.top-nav li a:hover {
+    margin-top: -20px;
+}
+/*整体思路：点击的时候第一个span消失，第二个span显示
+
+  整个盒子向上移动20px
+
+*/

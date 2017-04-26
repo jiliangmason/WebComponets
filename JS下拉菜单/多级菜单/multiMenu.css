@@ -1,0 +1,46 @@
+
+.navmenu {
+    font-size: 12px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navmenu li {
+    margin-right: 1px;
+    float: left;
+} /*不给li宽度和高度*/
+
+.navmenu li a {
+    text-decoration: none;
+    color: #666;
+    display: inline-block;
+    background: #dddddd;
+    line-height: 20px;
+    width: 80px;
+    text-align: center;
+}
+
+.navmenu li ul {
+    display: none;
+    list-style-type: none;
+    position: relative; /*三级菜单的位置需要移动*/
+}
+
+.navmenu li:hover ul {
+    display: block;
+    width: 80px; /*为了使二级菜单竖直排列*/
+    padding: 0; /*清理ul默认的padding值*/
+}
+
+.navmenu li:hover ul li ul {
+    display: none;
+}
+
+.navmenu li ul li:hover ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 80px;
+}

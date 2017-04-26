@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 600px;
+    height: 40px;
+    background-color: #eee;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    width: 100px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    width: 100px;
+}
+
+a:hover {
+    color: #fff;
+    background-color: #666;
+}
+
+ul li ul {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100px;
+    display: none;
+}
+
+ul li ul li {
+    float: none;
+    margin-top: 2px;
+    background-color: #eee;
+}
